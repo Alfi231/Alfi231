@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/5efc3a5f39.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="image/A.png">
+    <title>Alfi Syahri</title>
+</head>
+<body>
+    <div class="kotak">
+        <h2 class="halo">Hello </h2><p class="kamu">You There</p><p class="nama">My Name Is Alfi</p>
+    </div>
+    <div class="geser">
+        <h2 id="indikator">LIGHTS</h2>
+        <input id="saklar" class="toggle" type="checkbox">
+    </div>
+    <div id="about">
+        <img src="image/profil.png">
+        <p class="aku">ALfi Syahri</p>
+        <p class="teh">Student,Intermediate Web Developer</p>
+        <p class="quot">"You Need Life,But Your Life Needs Religion"</p>
+    </div>
+    <div id="kontak">
+        <p class="dapat">Get Me On</p>
+        <a href="https://www.instagram.com/alfi_poy/"><i class="fa fa-instagram fa-4x" id="ig" aria-hidden="true"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100031291443237"><i class="fa fa-facebook fa-3x" id="fb" aria-hidden="true"></i></a>
+        <hr class="batas">
+        <p class="lo">Contact</p>
+        <a href="https://t.me/AlfiRzptr1"><i class="fab fa-telegram-plane fa-3x" id="tele" aria-hidden="true"></i></a>
+        <a class="alfi" href="https://t.me/AlfiRzptr1">@ALfiRzptr1</a>
+    </div>
+
+    <script>
+        let saklar = document.getElementById("saklar");
+        let hilang = document.getElementById("about");
+        let aku = document.getElementById("kontak");
+        saklar.addEventListener("click", function(){
+            if (saklar.checked){
+                status.innerHTML = "OFF";
+                hilang.style.display = "block";
+                aku.style.display = "block";
+            } else if (!saklar.checked){
+                status.innerHTML = "ON";
+                hilang.style.display = "none";
+                aku.style.display = "none";
+            }
+        });
+
+
+    </script>
+</body>
+</html>
+<style>
+   body{
+       display: flex;
+       height: 100%;
+       background-size: cover;
+       background: black;
+       font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   }
+   .alfi{
+       text-decoration: none;
+       -webkit-text-fill-color: #4287f5;
+       position: relative;
+       font-size: 25px;
+       right: -50px;
+       top: -83px;
+   }
+   #tele{
+       position: relative;
+       color: #4287f5;
+       top: -70px;
+       margin: 0 auto;
+       left: 40px;
+   }
+   #tele:hover{
+       color:#50bfe6;
+       filter: drop-shadow(0 0 20px #50bfe6);
+   }
+   .alfi:hover{
+    -webkit-text-fill-color:#50bfe6;
+    text-shadow: 0 0 20px #50bfe6;
+   }
+   .lo{
+       -webkit-text-fill-color: aqua;
+       font-size: 30px;
+       text-align: center;
+       position: relative;
+       top: -45px;
+       text-shadow: 0 0 10px #50bfe6;
+   }
+   .batas{
+       margin: 0 auto;
+       position: relative;
+       width: 240px;
+       top: -15px;
+       color: #50bfe6;
+       height: 2px;
+       background-color: #50bfe6;
+       border:none;
+   }
+   #fb{
+       cursor: pointer;
+       color: #4287f5;
+       position: relative;
+       margin-left: 60px;
+       top: -30px; 
+   }
+   i#ig{
+      cursor: pointer;
+      color: #4287f5;
+      position: relative;
+      top: -25px;
+      margin-left: 50px;
+   }
+   #fb:hover{
+       color: #50bfe6;
+       filter: drop-shadow( 0 0 20px #50bfe6);
+   }
+   #ig:hover{
+       color: #50bfe6;
+       filter: drop-shadow( 0 0 20px #50bfe6);
+   }
+   .dapat{
+       -webkit-text-fill-color: aqua;
+       text-align: center;
+       margin-top: 5px;
+       font-size: 30px;
+       text-shadow: 0 0 10px #50bfe6;
+   }
+   .teh,.aku,.quot{
+       -webkit-text-fill-color: aqua;
+       margin-left: 20px;
+       text-shadow: 0 0 10px #50bfe6;
+   }
+   .aku{
+       margin-top: -110px;
+       font-size: 20px;
+       border-left: 1px solid #50bfe6;
+   }
+   .teh{
+       margin-top: 30px;
+       font-size: 18px;
+       border-left: 1px solid #50bfe6;
+   }
+   .quot{
+       margin-top: 45px;
+       font-size: 25px;
+       font-style: italic;
+   }
+   img{
+       width: 100px;
+       height: 100px;
+       border: 3px solid #50bfe6;
+       border-radius: 10px;
+       margin-top: 20px;
+       margin-left: 325px;
+   }
+   #about{
+       content: "img";
+       display: none;
+       position: fixed;
+       width: 450px;
+       height: 234px;
+       border: 3px solid #50bfe6;
+       top: 67px;
+       right: 310px;
+       box-shadow: 0 0 30px #50bfe6;
+       -webkit-box-reflect: below 1px linear-gradient(transparent,#0003);
+   }
+   #kontak{
+       display: none;
+       position: fixed;
+       width: 260px;
+       height: 234px;
+       border: 3px solid #50bfe6;
+       top: 67px;
+       right: 30px;
+       box-shadow: 0 0 30px #50bfe6;
+       -webkit-box-reflect: below 1px linear-gradient(transparent,#0003);
+   }
+   #indikator{
+       -webkit-text-fill-color: #50bfe6;
+       margin-left: 15px;
+   }
+   div.geser{
+       margin-left: 350px;
+       margin-top: -28px;
+   }
+   .toggle {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      width: 98px;
+      height: 30px;
+      position: relative;
+      border-radius: 20px;
+      display: inline-block;
+      overflow: hidden;
+      outline: none;
+      border: 1px solid #50bfe6;
+      margin-top: -18px;
+      cursor: pointer;
+      background-color: #707070;
+      transition: background-color ease 0.3s;
+    }
+    .toggle:before {
+      content: "ON      OFF";
+      display: block;
+      position: absolute;
+      z-index: 2;
+      width: 25px;
+      height: 25px;
+      background: black;
+      left: 2px;
+      top: 2px;
+      border-radius: 50%;
+      font:bold 12px/28px Helvetica;
+      text-indent: -40px;
+      word-spacing: 60px;
+      color: #fff;
+      text-shadow: -1px -1px rgba(0,0,0,0.15);
+      white-space: nowrap;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+      transition: all cubic-bezier(0.3, 1.5, 0.7, 1) 0.3s;
+    }
+    .toggle:checked {background: #707070;}
+    .toggle:checked:before {left:70px;}
+   .kotak{
+       color: white;
+       text-align: center;
+       position: relative;
+       width: 550px;
+       height: 300px;
+       left: 20px;
+       margin-top: 0px;
+       -webkit-box-reflect: below 1px linear-gradient(transparent,#0003);
+   }
+   .kotak:before{
+       content: '';
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 200px;
+       height: 200px;
+       border-top: 3px solid #50bfe6;
+       border-left: 3px solid #50bfe6;
+       transition: 0.5s;
+   }
+   .kotak:hover:before{
+       width: 547px;
+       height: 295px;
+       box-shadow: 0 0 150px #50bfe6;
+       box-shadow: 0 0 30px #50bfe6 inset;
+   }
+   .kotak:after{
+       content: '';
+       position: absolute;
+       bottom: 0;
+       right: 0;
+       width: 200px;
+       height: 200px;
+       border-bottom: 3px solid #50bfe6;
+       border-right: 3px solid #50bfe6;
+       transition: 0.5s;
+   }
+   .kotak:hover:after{
+        width: 547px;
+        height: 295px;
+        box-shadow: 0 0 150px #50bfe6;
+   }
+   .halo,.kamu,.nama{
+       -webkit-text-fill-color:aqua;
+       -webkit-text-stroke: aqua;
+   }
+   .halo,.kamu,.nama{
+       text-shadow: 0 0 30px #50bfe6;
+   }
+   .halo{
+        font-size: 100px;
+        margin-left: -235px;
+        margin-top: 3px;
+        font-weight: lighter;
+   }
+   .kamu{
+       font-size: 70px;
+       font-weight:lighter;
+       margin-right: 150px;
+       margin-top: -80px;
+   }
+   .nama{
+       font-size: 70px;
+       font-weight:lighter;
+       margin-right: 0px;
+       margin-top: -90px;
+   }
+   @media screen and (max-width: 576px){
+       .halo{
+           font-size: 70px;
+       }
+   }
+</style>
